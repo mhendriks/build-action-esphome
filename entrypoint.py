@@ -57,7 +57,7 @@ print(config)
 yaml.add_multi_constructor("", lambda _, t, n: t + " " + n.value)
 config = yaml.load(config, Loader=yaml.FullLoader)
 
-name = config["esphome"]["name"]
+name = filename
 
 platform = ""
 if "esp32" in config:
